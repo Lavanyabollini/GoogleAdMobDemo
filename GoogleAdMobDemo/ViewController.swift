@@ -9,10 +9,11 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UITableViewController, GADBannerViewDelegate{
+class ViewController: UITableViewController, GADBannerViewDelegate,GADInterstitialDelegate{
     
    var imagesArray=[UIImage]()
  var bannerView: GADBannerView!
+    var interstitial: GADInterstitial?
     override func viewDidLoad() {
         super.viewDidLoad()
         imagesArray = [ UIImage(named: "Image1.png")!,
@@ -25,12 +26,35 @@ class ViewController: UITableViewController, GADBannerViewDelegate{
         bannerView?.rootViewController = self
          bannerView?.load(GADRequest())
          bannerView?.delegate = self
+        interstitial = createAndLoadInterstitial()
         
     }
     
    
-    
+    private func createAndLoadInterstitial() -> GADInterstitial? {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3827126407335086/6986437806")
+        
+        guard let interstitial = interstitial else {
+            return nil
+        }
+        
+        let request = GADRequest()
+        // Remove the following line before you upload the app
+        request.testDevices = [ kGADSimulatorID ]
+        interstitial.load(request)
+        interstitial.delegate = self
+        
+        return interstitial
+    }
  
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("Interstitial loaded successfully")
+        ad.present(fromRootViewController: self)
+    }
+    
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        print("Fail to receive interstitial")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
