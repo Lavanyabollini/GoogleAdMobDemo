@@ -16,12 +16,14 @@ class ViewController: UITableViewController, GADBannerViewDelegate,GADInterstiti
     var interstitial: GADInterstitial?
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController!.isToolbarHidden = false
+
         imagesArray = [ UIImage(named: "Image1.png")!,
                             UIImage(named: "Image2.png")!,
                             UIImage(named: "Image3.png")!,
                             UIImage(named: "Image4.png")!
                             ]
-        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         bannerView?.adUnitID = "ca-app-pub-3827126407335086/6839878394"
         bannerView?.rootViewController = self
          bannerView?.load(GADRequest())
@@ -66,11 +68,14 @@ class ViewController: UITableViewController, GADBannerViewDelegate,GADInterstiti
         
         print("Banner loaded successfully")
         // Reposition the banner ad to create a slide down effect
-        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        let translateTransform = CGAffineTransform(translationX:0, y: -bannerView.bounds.size.height)
         bannerView.transform = translateTransform
-        
+       
         UIView.animate(withDuration: 0.5) {
-            bannerView.transform = CGAffineTransform.identity
+           // self.tableView.tableFooterView?.frame = bannerView.frame
+            self.bannerView.transform = CGAffineTransform.identity
+           // self.tableView.tableFooterView = self.bannerView
+
         }
     }
     
@@ -116,8 +121,14 @@ class ViewController: UITableViewController, GADBannerViewDelegate,GADInterstiti
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return bannerView
     }
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return bannerView.frame.height
+    }
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return bannerView
+    }
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
         return bannerView.frame.height
     }
