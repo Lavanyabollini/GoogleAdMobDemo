@@ -14,6 +14,15 @@
 		980595811FDFB7580056E84D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9805957F1FDFB7580056E84D /* LaunchScreen.storyboard */; };
 		980595891FDFF4870056E84D /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980595881FDFF4870056E84D /* NewTableViewCell.swift */; };
 		9805958B1FDFF85A0056E84D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805958A1FDFF85A0056E84D /* ViewController.swift */; };
+		987271261FE282CE0065A97D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987271251FE282CE0065A97D /* StoreKit.framework */; };
+		987271281FE282DD0065A97D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987271271FE282DD0065A97D /* CoreMotion.framework */; };
+		9872712A1FE282E90065A97D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987271291FE282E90065A97D /* AdSupport.framework */; };
+		987271391FE2853F0065A97D /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987271351FE2853F0065A97D /* SampleCell.swift */; };
+		9872713B1FE2853F0065A97D /* FullScreenAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987271371FE2853F0065A97D /* FullScreenAdsViewController.swift */; };
+		9872713C1FE2853F0065A97D /* TableViewAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987271381FE2853F0065A97D /* TableViewAdsViewController.swift */; };
+		9872713E1FE285A10065A97D /* SampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9872713D1FE285A00065A97D /* SampleCell.xib */; };
+		987271401FE285C50065A97D /* SingleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872713F1FE285C50065A97D /* SingleAdsViewController.swift */; };
+		987271491FE2916C0065A97D /* GoogleAdMobDemo-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 987271481FE291340065A97D /* GoogleAdMobDemo-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		980595821FDFB7580056E84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		980595881FDFF4870056E84D /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		9805958A1FDFF85A0056E84D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		987271251FE282CE0065A97D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		987271271FE282DD0065A97D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		987271291FE282E90065A97D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		987271351FE2853F0065A97D /* SampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
+		987271371FE2853F0065A97D /* FullScreenAdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenAdsViewController.swift; sourceTree = "<group>"; };
+		987271381FE2853F0065A97D /* TableViewAdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdsViewController.swift; sourceTree = "<group>"; };
+		9872713D1FE285A00065A97D /* SampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCell.xib; sourceTree = "<group>"; };
+		9872713F1FE285C50065A97D /* SingleAdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleAdsViewController.swift; sourceTree = "<group>"; };
+		987271481FE291340065A97D /* GoogleAdMobDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleAdMobDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9872712A1FE282E90065A97D /* AdSupport.framework in Frameworks */,
+				987271281FE282DD0065A97D /* CoreMotion.framework in Frameworks */,
+				987271261FE282CE0065A97D /* StoreKit.framework in Frameworks */,
 				6DB0E46EA1130B4B811B7DF7 /* Pods_GoogleAdMobDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,10 +84,11 @@
 		980595751FDFB7580056E84D /* GoogleAdMobDemo */ = {
 			isa = PBXGroup;
 			children = (
+				987271481FE291340065A97D /* GoogleAdMobDemo-Bridging-Header.h */,
 				980595761FDFB7580056E84D /* AppDelegate.swift */,
 				9805958A1FDFF85A0056E84D /* ViewController.swift */,
 				9805957A1FDFB7580056E84D /* Main.storyboard */,
-				980595881FDFF4870056E84D /* NewTableViewCell.swift */,
+				987271411FE287990065A97D /* FBAds */,
 				9805957D1FDFB7580056E84D /* Assets.xcassets */,
 				9805957F1FDFB7580056E84D /* LaunchScreen.storyboard */,
 				980595821FDFB7580056E84D /* Info.plist */,
@@ -74,9 +96,25 @@
 			path = GoogleAdMobDemo;
 			sourceTree = "<group>";
 		};
+		987271411FE287990065A97D /* FBAds */ = {
+			isa = PBXGroup;
+			children = (
+				9872713D1FE285A00065A97D /* SampleCell.xib */,
+				987271371FE2853F0065A97D /* FullScreenAdsViewController.swift */,
+				9872713F1FE285C50065A97D /* SingleAdsViewController.swift */,
+				987271351FE2853F0065A97D /* SampleCell.swift */,
+				987271381FE2853F0065A97D /* TableViewAdsViewController.swift */,
+				980595881FDFF4870056E84D /* NewTableViewCell.swift */,
+			);
+			path = FBAds;
+			sourceTree = "<group>";
+		};
 		9D24258B22BDF8CDDBE8C380 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				987271291FE282E90065A97D /* AdSupport.framework */,
+				987271271FE282DD0065A97D /* CoreMotion.framework */,
+				987271251FE282CE0065A97D /* StoreKit.framework */,
 				442B54FF091025629AE5CB44 /* Pods_GoogleAdMobDemo.framework */,
 			);
 			name = Frameworks;
@@ -154,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				980595811FDFB7580056E84D /* LaunchScreen.storyboard in Resources */,
+				9872713E1FE285A10065A97D /* SampleCell.xib in Resources */,
 				9805957E1FDFB7580056E84D /* Assets.xcassets in Resources */,
 				9805957C1FDFB7580056E84D /* Main.storyboard in Resources */,
 			);
@@ -217,8 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987271491FE2916C0065A97D /* GoogleAdMobDemo-Bridging-Header.h in Sources */,
 				9805958B1FDFF85A0056E84D /* ViewController.swift in Sources */,
+				987271401FE285C50065A97D /* SingleAdsViewController.swift in Sources */,
+				9872713C1FE2853F0065A97D /* TableViewAdsViewController.swift in Sources */,
+				987271391FE2853F0065A97D /* SampleCell.swift in Sources */,
 				980595891FDFF4870056E84D /* NewTableViewCell.swift in Sources */,
+				9872713B1FE2853F0065A97D /* FullScreenAdsViewController.swift in Sources */,
 				980595771FDFB7580056E84D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +342,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleAdMobDemo/GoogleAdMobDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -346,7 +391,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleAdMobDemo/GoogleAdMobDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -359,10 +406,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7G38S6868;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GoogleAdMobDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.GoogleAdMobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleAdMobDemo/GoogleAdMobDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -375,10 +425,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7G38S6868;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GoogleAdMobDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mob.GoogleAdMobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleAdMobDemo/GoogleAdMobDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

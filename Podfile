@@ -7,4 +7,5 @@ target 'GoogleAdMobDemo' do
 
   # Pods for GoogleAdMobDemo
 pod 'Google-Mobile-Ads-SDK'
+pod 'FBAudienceNetwork'
 end
